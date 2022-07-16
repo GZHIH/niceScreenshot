@@ -7,7 +7,9 @@
 - 提供了一个转换base64的小工具;  
 
 ## 实现原理
-将页面dom XML序列化后塞入svg的foreignObject标签，通过svg标签以及foreignObject渲染出原始的页面dom；将svg标签字符串拼接，转为base64数据形式，作为一个img的src，最后将这个img渲染到canvas上，通过canvas的toDataURL把base64：svg类型的图片转为base64：png类型的图片，最后通过a标签下载下来  
+1. 将页面dom克隆，执行XML序列化后塞入svg的foreignObject标签；（通过svg的foreignObject标签可以在svg中渲染出html页面内容）
+2. 将svg标签作为字符串与'data:image/svg+xml;charset=utf-8,'拼接，得到base64形式的svg图片，把这个字符串作为一个img标签的src；
+3. 将这个img标签渲染到canvas上，通过canvas的toDataURL把base64形式的svg图片转为base64形式的png图片，最后通过a标签下载下来
 
 ## 核心
 ### niceScreenshot.js  
