@@ -105,8 +105,8 @@ class Dom2Img {
 
             const IMG = document.createElement('img')
             IMG.setAttribute('src', originCanvasItem.toDataURL())
-            IMG.setAttribute('width', originCanvasItem.width)
-            IMG.setAttribute('height', originCanvasItem.height)
+            IMG.setAttribute('width', originCanvasItem.offsetWidth)
+            IMG.setAttribute('height', originCanvasItem.offsetHeight)
 
             cloneCanvasItem.parentNode.replaceChild(IMG, cloneCanvasItem)
         })

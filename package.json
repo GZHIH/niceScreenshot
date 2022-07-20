@@ -41,7 +41,10 @@
     },
     "browserslist": [
         "> 1%",
-        "last 2 versions",
+        "Chrome 49",
+        "Firefox 49",
+        "Opera 49",
+        "Edge 79",
         "not dead"
     ]
 }
