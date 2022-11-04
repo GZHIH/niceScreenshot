@@ -7,7 +7,7 @@ const AntDesignIconsPath = './build/antdv-icons.js';
 module.exports = {
     outputDir: 'dist',
     // 自定义html模板cpoy后目标的路径(相对 outputDir 的路径)或者修改文件名字、后缀
-    indexPath: './index.ftl',
+    indexPath: './index.html',
     // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
     assetsDir: './assets',
     publicPath: isProduction ? '' : '',
